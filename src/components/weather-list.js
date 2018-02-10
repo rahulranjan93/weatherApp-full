@@ -23,15 +23,26 @@ class WeatherList extends Component {
               lon={lon}
             />
           </div>
+          <div>{name}</div>
         </td>
         <td>
-          <Chart className="content" data={temps} color="red" />
+          <Chart className="content" data={temps} unit={'K'} color="red" />
         </td>
         <td>
-          <Chart className="content" data={pressures} color="blue" />
+          <Chart
+            className="content"
+            data={pressures}
+            unit={'hPa'}
+            color="blue"
+          />
         </td>
         <td>
-          <Chart className="content" data={humidities} color="green" />
+          <Chart
+            className="content"
+            data={humidities}
+            unit={'%'}
+            color="green"
+          />
         </td>
       </tr>
     );
